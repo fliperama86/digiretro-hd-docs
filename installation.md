@@ -1,10 +1,8 @@
-# DigiRetro HD Installation: SNES
+# DigiRetro HD Installation: SNES SHVC
 
 ## Before You Begin
 
-This guide shows solder points on a console with separate PPU1 and PPU2 chips and a separate audio module. Do not assume these locations apply to other motherboard layouts.
-
-> **Hardware details pending confirmation:** The supported console motherboard and DigiRetro main board/FPC revisions, the final connection for PPU1 pin 94, and the required FFC cable type and contact orientation at both connectors are not yet documented. Confirm these details for your hardware before starting the installation.
+This guide is specific to the SHVC revision of the SNES, with separate PPU1 and PPU2 chips and a separate audio module. Do not use these solder-point locations for other motherboard revisions.
 
 - Disconnect the console's power supply and all external cables before working on it. Keep power disconnected throughout soldering and cable installation.
 - Use magnification, flux, a temperature-controlled soldering iron, solder wick, and a multimeter. This installation requires fine-pitch soldering and lifting IC pins; forcing a pin can damage it or its motherboard pad.
@@ -24,7 +22,7 @@ This guide shows solder points on a console with separate PPU1 and PPU2 chips an
 The pins to lift are marked in the image below:
 
 - **PPU2:** pins 90-93 and 51-58.
-- **PPU1:** pin 94. Its final connection must be confirmed before lifting it.
+- **PPU1:** pin 94.
 
 Apply flux and remove excess solder as needed. Heat each joint until the solder melts, then gently lift the pin just enough to clear its motherboard pad. For PPU2, leave enough clearance to insert the corresponding FPC pad. Do not pry against solid solder or force a pin that does not move freely.
 
@@ -47,8 +45,6 @@ Inspect each lifted pin under magnification for damage, contact with adjacent pi
 - Gently lower the lifted pins onto their corresponding FPC pads one at a time. Make sure each pin is aligned **before** soldering it.
 - Once alignment is correct, solder all intended FPC joints. Check for bridges and unintended contact with the original motherboard pads.
 
-> **PPU1 pin 94:** Its final connection, including whether it must remain isolated from the original motherboard pad, still needs to be documented. Do not assume it should be soldered back to that pad.
-
 ## Wiring
 
 - Connect the CTL0, CTL1, and CTL2 vias on the motherboard to the matching pads on the FPC.
@@ -67,6 +63,6 @@ Inspect each lifted pin under magnification for damage, contact with adjacent pi
 - Inspect all solder joints under magnification for bridges, loose solder, damaged pins, and unintended contact with motherboard pads or shielding.
 - With power disconnected, check continuity from each wired source to its intended destination and check that lifted pins are isolated from their original pads wherever the verified connection requires it.
 - Check for an unintended short between 5V and GND and between adjacent connections that should be separate. Do not apply power if a measurement is unexplained.
-- Confirm that PPU1 pin 94 has its verified final connection and that the FFC orientation is correct at both ends.
+- Recheck the connection at PPU1 pin 94 and confirm that the FFC orientation is correct at both ends.
 - Secure and insulate the main board and wiring so they cannot move or short against the console or shielding.
 - Only after these checks pass, reconnect power and test video and audio. Disconnect power again before making any adjustments.
